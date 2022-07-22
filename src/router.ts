@@ -9,7 +9,9 @@ router.post('/mail', async (req, res) => {
       pass: process.env.SMTP_PASSWORD,
       user: process.env.SMTP_EMAIL,
     },
-    service: 'gmail',
+    host: 'smtp.zoho.com',
+    port: 465,
+    secure: true, // use SSL
   });
 
   const { city, email, message, name, phone, subject } = req.body;
