@@ -18,7 +18,7 @@
   "main": "index.js",
   "name": "taishilsf-api",
   "scripts": {
-    "build": "tsc --watch",
+    "build": "tsc --watch && npm start",
     "start": "node dist/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
