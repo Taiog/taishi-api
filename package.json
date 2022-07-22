@@ -18,9 +18,11 @@
   "main": "index.js",
   "name": "taishilsf-api",
   "scripts": {
-    "build": "tsc && node dist/index.js",
     "start": "node dist/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "postinstall": "tsc",
+    "watch-node": "nodemon dist/index.js",
+    "watch-ts": "tsc -w",
+    "deploy": "git add . && git commit -m Heroku && git push heroku master"
   },
   "version": "1.0.0"
 }
