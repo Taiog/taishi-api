@@ -35,7 +35,7 @@ router.post('/mail', async (req, res) => {
   transporter.sendMail(mailOptions, function (error) {
     if (error) {
       res.send({
-        error: 'Erro ao enviar email',
+        error
       });
     } else {
       res.send({
