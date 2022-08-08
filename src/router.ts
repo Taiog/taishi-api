@@ -4,6 +4,12 @@ import nodemailer from "nodemailer";
 const router = express.Router();
 
 router.post("/mail", async (req, res) => {
+  console.log({
+    host: process.env.SMTP_HOST,
+    pass: process.env.SMTP_PASSWORD,
+    port: +process.env.SMTP_PORT,
+    user: process.env.SMTP_EMAIL,
+  });
   const transporter = nodemailer.createTransport({
     auth: {
       pass: process.env.SMTP_PASSWORD,
